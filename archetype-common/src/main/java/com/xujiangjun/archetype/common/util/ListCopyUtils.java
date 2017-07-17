@@ -8,11 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * List对象拷贝，使用BeanUtils
+ *
  * @author xujiangjun
  * @date 2017-04-01 17:10
  */
 @Slf4j
-public class ListCopyUtil {
+public class ListCopyUtils {
 
     /**
      * List之间的拷贝
@@ -33,11 +35,11 @@ public class ListCopyUtil {
                 targetList.add(targetObj);
             }
         } catch (InstantiationException e) {
-            log.error("ListCopyUtil#copyTo() happens instantiationException. list:{}, targetClass:{}",
+            log.error("ListCopyUtils.copyTo() happens instantiationException. list:{}, targetClass:{}",
                     list, targetClass, e);
             throw new RuntimeException("happens instantiationException", e);
         } catch (IllegalAccessException e) {
-            log.error("ListCopyUtil#copyTo() happens illegalAccessException. list:{}, targetClass:{}",
+            log.error("ListCopyUtils.copyTo() happens illegalAccessException. list:{}, targetClass:{}",
                     list, targetClass, e);
             throw new RuntimeException("happens illegalAccessException", e);
         }

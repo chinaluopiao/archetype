@@ -24,6 +24,10 @@
             <artifactId>archetype-dao</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.xujiangjun.archetype</groupId>
+            <artifactId>archetype-common</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>

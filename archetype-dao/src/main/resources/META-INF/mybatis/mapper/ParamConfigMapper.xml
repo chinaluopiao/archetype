@@ -3,7 +3,7 @@
 <mapper namespace="com.xujiangjun.archetype.dao.mapper.ParamConfigMapper">
   <resultMap id="BaseResultMap" type="com.xujiangjun.archetype.dao.model.ParamConfig">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="is_deleted" jdbcType="TINYINT" property="isDeleted" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
     <result column="creator" jdbcType="VARCHAR" property="creator" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="modifier" jdbcType="VARCHAR" property="modifier" />
@@ -21,7 +21,7 @@
     select 
     <include refid="Base_Column_List" />
     from c_param_config
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER} and is_deleted = '0'
   </select>
   <insert id="insert" parameterType="com.xujiangjun.archetype.dao.model.ParamConfig">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
@@ -31,7 +31,7 @@
       modifier, gmt_modified, param_name, 
       param_no, param_value, remark
       )
-    values (#{isDeleted,jdbcType=TINYINT}, #{creator,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, 
+    values (#{isDeleted,jdbcType=INTEGER}, #{creator,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP},
       #{modifier,jdbcType=VARCHAR}, #{gmtModified,jdbcType=TIMESTAMP}, #{paramName,jdbcType=VARCHAR}, 
       #{paramNo,jdbcType=VARCHAR}, #{paramValue,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}
       )
@@ -72,7 +72,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="isDeleted != null">
-        #{isDeleted,jdbcType=TINYINT},
+        #{isDeleted,jdbcType=INTEGER},
       </if>
       <if test="creator != null">
         #{creator,jdbcType=VARCHAR},
@@ -104,7 +104,7 @@
     update c_param_config
     <set>
       <if test="isDeleted != null">
-        is_deleted = #{isDeleted,jdbcType=TINYINT},
+        is_deleted = #{isDeleted,jdbcType=INTEGER},
       </if>
       <if test="creator != null">
         creator = #{creator,jdbcType=VARCHAR},
@@ -131,11 +131,11 @@
         remark = #{remark,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER} and is_deleted = '0'
   </update>
   <update id="updateByPrimaryKey" parameterType="com.xujiangjun.archetype.dao.model.ParamConfig">
     update c_param_config
-    set is_deleted = #{isDeleted,jdbcType=TINYINT},
+    set is_deleted = #{isDeleted,jdbcType=INTEGER},
       creator = #{creator,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       modifier = #{modifier,jdbcType=VARCHAR},
@@ -144,6 +144,39 @@
       param_no = #{paramNo,jdbcType=VARCHAR},
       param_value = #{paramValue,jdbcType=VARCHAR},
       remark = #{remark,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER} and is_deleted = '0'
+  </update>
+
+  <!-- 扩展自动生成或自定义的SQl语句写在此之后 -->
+  <select id="selectByParamNo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from c_param_config
+    where param_no = #{paramNo,jdbcType=VARCHAR} and is_deleted = '0'
+  </select>
+
+  <update id="updateByParamNo" parameterType="com.xujiangjun.archetype.dao.model.ParamConfig">
+    update c_param_config
+    <set>
+      <if test="isDeleted != null">
+        is_deleted = #{isDeleted,jdbcType=INTEGER},
+      </if>
+      <if test="modifier != null">
+        modifier = #{modifier,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paramName != null">
+        param_name = #{paramName,jdbcType=VARCHAR},
+      </if>
+      <if test="paramValue != null">
+        param_value = #{paramValue,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where param_no = #{paramNo,jdbcType=VARCHAR} and is_deleted = '0'
   </update>
 </mapper>

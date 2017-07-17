@@ -43,7 +43,7 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
         <!-- 给出扫描Dao接口包 -->
         <property name="basePackage" value="com.xujiangjun.archetype.dao.mapper" />
-        <!-- 通过注解扫描Dao接口包, 可参考saint项目 -->
-        <!--<property name="annotationClass" value="org.springframework.stereotype.Repository"/>-->
+        <!-- 通过注解扫描Dao接口包, 可参考saint项目, 加上可以方便IDE识别Spring的Bean -->
+        <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
     </bean>
 </beans>

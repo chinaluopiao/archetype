@@ -43,6 +43,18 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
+  <!-- 3.2 IP白名单过滤器 -->
+  <filter>
+    <filter-name>accessFilter</filter-name>
+    <filter-class>com.xujiangjun.archetype.web.filter.AccessFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>accessFilter</filter-name>
+    <url-pattern>/channel/*</url-pattern>
+  </filter-mapping>
+
+  <!-- 4. 配置上下文参数及监听器 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:application-context.xml</param-value>

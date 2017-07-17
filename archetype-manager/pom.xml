@@ -25,10 +25,6 @@
         </dependency>
         <dependency>
             <groupId>com.xujiangjun.archetype</groupId>
-            <artifactId>archetype-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.xujiangjun.archetype</groupId>
             <artifactId>archetype-api</artifactId>
         </dependency>
         <!-- 其他系统依赖 -->

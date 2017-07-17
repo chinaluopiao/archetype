@@ -9,4 +9,10 @@ package com.xujiangjun.archetype.common.constant;
  */
 public class ConfigConsts {
 
+    /** 系统名 **/
+    public static final String SYSTEM = "archetype";
+
+    /** IP白名单配置项 **/
+    public static final String IP_WHITE_LIST = "ip_white_list";
+
 }

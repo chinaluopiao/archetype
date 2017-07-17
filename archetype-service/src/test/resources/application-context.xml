@@ -16,7 +16,6 @@
             <list>
                 <value>classpath:config/jdbc.properties</value>
                 <value>classpath:config/config.properties</value>
-                <value>classpath:config/dubbo.properties</value>
                 <value>classpath:config/redis.properties</value>
             </list>
         </property>
@@ -25,7 +24,5 @@
     <!-- 引入Spring配置文件 -->
     <import resource="classpath:spring/spring-dao.xml"/>
     <import resource="classpath:spring/spring-service.xml"/>
-    <import resource="classpath:spring/spring-mvc.xml"/>
-    <import resource="classpath:spring/dubbo-context.xml"/>
     <import resource="classpath:spring/spring-redis.xml"/>
 </beans>

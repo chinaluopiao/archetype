@@ -17,7 +17,8 @@
                 <value>classpath:config/jdbc.properties</value>
                 <value>classpath:config/config.properties</value>
                 <value>classpath:config/dubbo.properties</value>
-                <!--<value>classpath:config/rabbitmq.properties</value>-->
+                <value>classpath:config/redis.properties</value>
+                <value>classpath:config/rocketmq.properties</value>
             </list>
         </property>
     </bean>
@@ -26,5 +27,6 @@
     <import resource="classpath:spring/spring-dao.xml"/>
     <import resource="classpath:spring/spring-service.xml"/>
     <import resource="classpath:spring/dubbo-context.xml"/>
-    <!--<import resource="classpath:spring/spring-rabbitmq.xml"/>-->
+    <import resource="classpath:spring/spring-redis.xml"/>
+    <import resource="classpath:spring/spring-rocketmq.xml"/>
 </beans>
