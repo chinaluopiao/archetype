@@ -1,6 +1,8 @@
-package com.xujiangjun.archetype.service.base;
+package com.xujiangjun.archetype.service;
 
 import com.xujiangjun.archetype.common.constant.ConfigConsts;
+import com.xujiangjun.archetype.service.base.BaseTest;
+import com.xujiangjun.archetype.service.base.ParamConfigService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

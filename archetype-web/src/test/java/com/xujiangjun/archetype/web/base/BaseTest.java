@@ -1,4 +1,4 @@
-package com.xujiangjun.archetype.web;
+package com.xujiangjun.archetype.web.base;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

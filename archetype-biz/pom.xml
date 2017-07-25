@@ -27,5 +27,9 @@
             <groupId>com.xujiangjun.archetype</groupId>
             <artifactId>archetype-manager</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+        </dependency>
     </dependencies>
 </project>
