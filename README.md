@@ -7,9 +7,11 @@
 
 自定义骨架工程：  
 1.在根目录archetype执行命令：mvn archetype:create-from-project  
-2.修改target/generated-sources/archetype的web模块pom文件，修改finalName、另修改archetype-metadata.xml
+2.修改target/generated-sources/archetype的web模块pom文件，修改finalName、另修改META-INF/maven/archetype-metadata.xml
 3.进入目录target/generated-sources/archetype后执行mvn clean install  
-4.在需要生成项目的地方执行命令：mvn archetype:generate -DarchetypeCatalog=local
+4.在需要生成项目的地方执行命令：mvn archetype:generate -DarchetypeCatalog=local  
+5.根据骨架工程生产新的工程后需要作出一些修改：去除api模块pom文件的parent的引用、拷贝.gitignore文件至新项目、修改finalName、修改sql的文件名、
+修改新项目中各模块的版本号等等，最后全局搜索archetype，看是否有还需替换的东西。
 
 总结：  
 1. info级别的日志用于记录调用情况、参数信息和返回值情况。  

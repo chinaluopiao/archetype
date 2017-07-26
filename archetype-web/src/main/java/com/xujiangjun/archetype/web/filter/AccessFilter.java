@@ -29,6 +29,11 @@ public class AccessFilter extends OncePerRequestFilter {
 
     private ParamConfigService paramConfigService;
 
+    /**
+     * 通过注解@Autowired无法注入，需要采用该方式注入
+     *
+     * @throws ServletException
+     */
     @Override
     protected void initFilterBean() throws ServletException {
         super.initFilterBean();
