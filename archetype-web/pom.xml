@@ -20,6 +20,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.4</version>
             </plugin>
+            <!-- TODO 根据自身选择tomcat或jetty容器 -->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
@@ -29,6 +30,23 @@
                     <server>localhost</server>
                     <uriEncoding>UTF-8</uriEncoding>
                     <port>8090</port>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.1.26</version>
+                <configuration>
+                    <connectors>
+                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                            <port>8080</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                    <contextPath>/${project.build.finalName}</contextPath>
+                    <!-- 设置检查web应用是否变化的间隔时间(秒)，有变更则自动热部署。
+                        默认0表示禁用热部署，任何一个大于0的数字都将表示启用热部署 -->
+                    <scanIntervalSeconds>0</scanIntervalSeconds>
                 </configuration>
             </plugin>
         </plugins>
