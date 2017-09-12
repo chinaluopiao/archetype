@@ -1,8 +1,9 @@
-* web模块依赖biz模块
-* biz模块依赖manager和service模块
-* service模块依赖dao模块
-* manager模块依赖api、common和service模块
-* web模块可直接对biz、manager和service层直接进行操作
+模块依赖与阿里巴巴开发手册保持一致，此外自己新增一个domain依赖
+
+* web模块依赖service模块
+* service模块依赖manager模块
+* manager模块依赖api、common和dao模块
+* service模块可直接对manager和dao层直接进行操作
 * manager模块用于提供和消费dubbo服务
 
 自定义骨架工程：  

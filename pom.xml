@@ -12,11 +12,11 @@
     <!-- 定义子模块 -->
     <modules>
         <module>archetype-dao</module>
-        <module>archetype-service</module>
         <module>archetype-manager</module>
-        <module>archetype-biz</module>
+        <module>archetype-service</module>
         <module>archetype-web</module>
         <module>archetype-common</module>
+        <module>archetype-domain</module>
         <module>archetype-api</module>
     </modules>
 
@@ -107,7 +107,7 @@
             <version>${springframework.version}</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- 消除冗长的Java代码 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -127,17 +127,12 @@
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>archetype-service</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
                 <artifactId>archetype-manager</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>archetype-biz</artifactId>
+                <artifactId>archetype-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -148,6 +143,11 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>archetype-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>archetype-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

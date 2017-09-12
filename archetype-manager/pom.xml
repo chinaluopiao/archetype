@@ -21,14 +21,37 @@
     <dependencies>
         <dependency>
             <groupId>com.xujiangjun.archetype</groupId>
-            <artifactId>archetype-service</artifactId>
+            <artifactId>archetype-api</artifactId>
         </dependency>
         <dependency>
             <groupId>com.xujiangjun.archetype</groupId>
-            <artifactId>archetype-api</artifactId>
+            <artifactId>archetype-dao</artifactId>
         </dependency>
-        <!-- 其他系统依赖 -->
-
+        <dependency>
+            <groupId>com.xujiangjun.archetype</groupId>
+            <artifactId>archetype-common</artifactId>
+        </dependency>
+        <!-- aspectj、aop和quartz依赖 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.amqp</groupId>
+            <artifactId>spring-rabbit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+        </dependency>
         <!-- dubbo依赖 -->
         <dependency>
             <groupId>com.alibaba</groupId>

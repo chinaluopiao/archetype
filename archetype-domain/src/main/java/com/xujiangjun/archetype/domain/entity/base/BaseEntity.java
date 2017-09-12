@@ -1,4 +1,4 @@
-package com.xujiangjun.archetype.dao.model;
+package com.xujiangjun.archetype.domain.entity.base;
 
 import lombok.Data;
 

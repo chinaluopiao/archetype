@@ -1,6 +1,6 @@
 package com.xujiangjun.archetype.dao.mapper;
 
-import com.xujiangjun.archetype.dao.model.ParamConfig;
+import com.xujiangjun.archetype.domain.entity.config.ParamConfig;
 import org.springframework.stereotype.Repository;
 
 @Repository

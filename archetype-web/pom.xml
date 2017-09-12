@@ -20,7 +20,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.4</version>
             </plugin>
-            <!-- TODO 根据自身选择tomcat或jetty容器 -->
+            <!-- 根据自身选择tomcat或jetty容器 -->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
@@ -56,7 +56,7 @@
     <dependencies>
         <dependency>
             <groupId>com.xujiangjun.archetype</groupId>
-            <artifactId>archetype-biz</artifactId>
+            <artifactId>archetype-service</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>

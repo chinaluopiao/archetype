@@ -2,6 +2,7 @@ package com.xujiangjun.archetype.dao.params.base;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,14 +11,29 @@ import java.util.List;
  * @date 2017-05-09 13:53
  */
 @Data
-public class BaseQueryParam {
+public class BaseQueryParam implements Serializable {
+
+    private static final long serialVersionUID = 1718654636074211851L;
 
     /** 查询起始位置 **/
     private int offset;
 
-    /** 最大查询条数 **/
-    private int limit;
+    /** 当前页 **/
+    private int page;
+
+    /** 每页大小 **/
+    private int pageSize;
 
     /** 自定义排序 **/
     private List<String> sorts;
+
+    /**
+     * 根据当前页和每页大小计算查询起始位置
+     */
+    public void setOffset() {
+        if (this.page < 1) {
+            this.page = 1;
+        }
+        this.offset = (this.page - 1) * this.pageSize;
+    }
 }

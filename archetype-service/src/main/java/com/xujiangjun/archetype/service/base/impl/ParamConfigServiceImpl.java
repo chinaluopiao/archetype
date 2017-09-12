@@ -5,7 +5,7 @@ import com.xujiangjun.archetype.common.domain.Result;
 import com.xujiangjun.archetype.common.enums.ErrorEnum;
 import com.xujiangjun.archetype.common.util.StringUtils;
 import com.xujiangjun.archetype.dao.mapper.ParamConfigMapper;
-import com.xujiangjun.archetype.dao.model.ParamConfig;
+import com.xujiangjun.archetype.domain.entity.config.ParamConfig;
 import com.xujiangjun.archetype.service.base.ParamConfigService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

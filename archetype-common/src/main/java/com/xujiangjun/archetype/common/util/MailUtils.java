@@ -1,4 +1,4 @@
-package com.xujiangjun.archetype.biz.util;
+package com.xujiangjun.archetype.common.util;
 
 import com.sun.mail.util.MailSSLSocketFactory;
 import com.xujiangjun.archetype.common.exception.BusinessException;
@@ -46,7 +46,7 @@ public class MailUtils {
         Session session = Session.getInstance(props, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                // TODO: 使用时请替换邮箱账号和密码
+                // 使用时请替换邮箱账号和密码
                 return new PasswordAuthentication(from, password);
             }
         });

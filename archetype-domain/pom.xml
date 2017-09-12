@@ -8,28 +8,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <!-- 定义项目坐标:groupId和version与父模块一致 -->
-    <artifactId>archetype-biz</artifactId>
+    <artifactId>archetype-domain</artifactId>
     <packaging>jar</packaging>
-    <name>archetype-biz</name>
+    <name>archetype-domain</name>
 
     <!-- 自定义属性 -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- 依赖管理 -->
-    <dependencies>
-        <dependency>
-            <groupId>com.xujiangjun.archetype</groupId>
-            <artifactId>archetype-service</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.xujiangjun.archetype</groupId>
-            <artifactId>archetype-manager</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-        </dependency>
-    </dependencies>
 </project>

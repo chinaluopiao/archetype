@@ -1,6 +1,6 @@
 package com.xujiangjun.archetype.web.util;
 
-import com.xujiangjun.archetype.biz.util.MailUtils;
+import com.xujiangjun.archetype.common.util.MailUtils;
 import com.xujiangjun.archetype.web.base.BaseTest;
 import org.junit.Test;
 

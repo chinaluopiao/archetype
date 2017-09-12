@@ -35,6 +35,10 @@
     <!-- 依赖管理 -->
     <dependencies>
         <dependency>
+            <groupId>com.xujiangjun.archetype</groupId>
+            <artifactId>archetype-domain</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
         </dependency>
